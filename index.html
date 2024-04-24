@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="img/logo.png" alt="Логотип" class="logo">
+            <div class="wrapper">
+                <div class="offer">
+                    <h2 class="offer__title">С помощью нас<br> вы сможете создать то, о чем</h2>
+                    <span class="title__span" id="color__changer">желаете!</span>
+                    <p class="offer__text">Наши возможности + опыт позволят Вам достичь огромного успеха.
+                        Мы верим в вас! И знаем это на все 100%. Вас не остановить!</p>
+                    <a href="#offer__info"
+                        class="offer__button animate__animated animate__heartBeat animate__infinite">Узнать
+                        больше...</a>
+                </div>
+                <div class="offer__block">
+                    <img src="img/header_img.png" alt="Телефон"
+                        class="header__image animate__animated animate__bounceInRight">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" id="offer__info">
+            <h2 class="main__title">Что Вам необходимо?</h2>
+            <div class="wrapper">
+                <div class="blocks">
+                    <img src="img/f1.png" alt="Иконка 1" class="blocks__images">
+                    <h3>Первый блок</h3>
+                    <p class="images__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="blocks">
+                    <img src="img/f2.png" alt="Иконка 2" class="blocks__images">
+                    <h3>Второй блок</h3>
+                    <p class="images__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit?</p>
+                </div>
+                <div class="blocks">
+                    <img src="img/f3.png" alt="Иконка 3" class="blocks__images">
+                    <h3>Третий блок</h3>
+                    <p class="images__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="order__form">
+        <div class="container">
+            <h2 class="section__title" id="order__title">Форма заказа товара</h2>
+            <form action="#" method="get" enctype="application/x-www-form-urlencoded">
+                <input type="text" name="firstname" id="firstname" required onblur="checkFirstName();" placeholder="Имя">
+                <input type="text" name="lastname" id="lastname" required onblur="checkLastName();" placeholder="Фамилия">
+                <input type="tel" name="phone" id="phone" required onblur="checkPhone();" placeholder="Номер телефона">
+                <select name="product" id="product">
+                    <option value="phone">Мобильный телефон</option>
+                    <option value="charger">Зарядное устройство</option>
+                    <option value="case">Защитный чехол</option>
+                </select>
+                <input type="number" name="quantity" id="quantity" required onblur="checkQuantity();" placeholder="Количество товара" value="1">
+                <button type="button" id="submit" onclick="checkOrderInformation();">Заказать</button>
+                <span id="order__summary"></span>
+            </form>
+        </div>
+    </section>
+    <section id="call__form">
+        <div class="container">
+            <h2 class="section__title">Форма заказа обратного звонка</h2>
+            <form action="#" method="get" enctype="application/x-www-form-urlencoded">
+                <input type="text" name="name" minlength="2" maxlength="16" placeholder="Имя">
+                <input type="email" name="email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                    placeholder="Введите свой E-mail">
+                <input type="tel" name="phone" required pattern="^\+?[0-9]\s?\(?[0-9]{3}\)?([\-\s]?[0-9]){7}$"
+                    placeholder="Телефон">
+                <input type="text" name="question" placeholder="Какая тема Вас интересует?">
+                <button type="submit" id="submit">Отправить вопрос</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p class="copyright">© Все на этом сайте защищено</p>
+    </footer>
+</body>
+
+</html>
